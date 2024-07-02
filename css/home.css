@@ -82,7 +82,7 @@ a {
 
 .nav {
   background: black;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
@@ -181,7 +181,7 @@ a {
   position: relative;
   display: inline-block;
   padding: 0 1rem;
-  z-index: 1; /* Tekst na pierwszym planie */
+  z-index: 1;
 }
 
 .title::before,
@@ -227,11 +227,6 @@ a {
   border-radius: 10px;
   margin-top: 1rem;
 }
-
-/* .centered {
-  padding: 1rem;
-  margin-top: 2rem;
-} */
 
 .section--unique {
   gap: 0;
@@ -301,7 +296,6 @@ a {
   margin-top: 1rem;
 }
 
-/* Ogólne style dla sekcji */
 .section {
   background: linear-gradient(180deg, #1a1010, #2a2a2a, #1f1515);
   color: #fff;
@@ -374,6 +368,7 @@ a {
     position: static;
     height: 100%;
     width: 100%;
+    display: none;
   }
 
   .nav a {
