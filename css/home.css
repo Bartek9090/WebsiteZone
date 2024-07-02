@@ -81,19 +81,17 @@ a {
 }
 
 .nav {
-  background: black;
+  background: rgba(20, 19, 19, 0.8);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  gap: 3vh;
   padding: 1vh 3vw;
   position: absolute;
   top: 10vh;
-  width: 100%;
-  z-index: 100;
+  right: -15rem;
+  width: 15rem;
+  z-index: 3;
   height: 90vh;
-  transition: right 0.3s ease;
-  right: -100%;
 }
 .nav.open {
   display: flex;
@@ -296,6 +294,7 @@ a {
   margin-top: 1rem;
 }
 
+/* Ogólne style dla sekcji */
 .section {
   background: linear-gradient(180deg, #1a1010, #2a2a2a, #1f1515);
   color: #fff;
@@ -359,12 +358,11 @@ a {
   .hamburger {
     display: none;
   }
-
   .nav {
     background: none;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: start;
+    gap: 2vw;
+    padding: 0.6vh 0;
     position: static;
     height: 100%;
     width: 100%;
