@@ -81,44 +81,43 @@ a {
 }
 
 .nav {
-  background: rgba(20, 19, 19, 0.8);
-  display: flex;
+  background: black;
+  display: none;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
   gap: 3vh;
   padding: 1vh 3vw;
   position: absolute;
   top: 10vh;
-  right: -15rem;
-  width: 15rem;
+  width: 100%;
   z-index: 3;
   height: 90vh;
 }
-.nav.open {
-  display: flex;
-  right: -100%;
-  transition: right 0.3s ease;
+.navDesktop {
+  display: none;
 }
 
 .nav a,
 .section--home a {
-  background: transparent;
+  width: 8rem;
+  background: antiquewhite;
   border-radius: 0.3rem;
   font-weight: bold;
   display: block;
   padding: 0.3rem;
   text-align: center;
-  color: #fff;
 }
 
 .nav a:hover,
 .section--home a:hover {
-  color: red;
   transform: scale(0.95);
   transition: transform 0.2s linear;
 }
 
 #hamburger-toggle:checked + .hamburger .hamburger__line:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 7px);
+  transform: rotate(-45deg) translate(-0.4rem, 0.5rem);
+  transform-origin: center;
 }
 
 #hamburger-toggle:checked + .hamburger .hamburger__line:nth-child(2) {
@@ -126,16 +125,13 @@ a {
 }
 
 #hamburger-toggle:checked + .hamburger .hamburger__line:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -7px);
+  transform: rotate(45deg) translate(-0.3rem, -0.5rem);
+  transform-origin: center;
 }
 
-.hamburger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 22px;
-  width: 22px;
+#hamburger-toggle:checked ~ .nav {
+  right: 0;
+  transition: right 0.3s ease;
 }
 
 .hamburger__line {
@@ -294,7 +290,6 @@ a {
   margin-top: 1rem;
 }
 
-/* Ogólne style dla sekcji */
 .section {
   background: linear-gradient(180deg, #1a1010, #2a2a2a, #1f1515);
   color: #fff;
@@ -358,19 +353,21 @@ a {
   .hamburger {
     display: none;
   }
-  .nav {
-    background: none;
+
+  .navDesktop {
+    display: flex;
     flex-direction: row;
-    gap: 2vw;
-    padding: 0.6vh 0;
+    justify-content: flex-end;
+    align-items: start;
     position: static;
     height: 100%;
     width: 100%;
-    display: none;
   }
 
-  .nav a {
+  .navDesktop a {
     flex: 1;
+    color: white;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
