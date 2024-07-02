@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Zone</title>
+    <script
+      src="https://kit.fontawesome.com/e24d93588b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <header id="home" class="header">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="assets/img/logo2.png" alt="company logo" />
+        </a>
+      </div>
+      <div class="header__nav">
+        <input type="checkbox" id="hamburger-toggle" />
+        <label for="hamburger-toggle" class="hamburger">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </label>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#offer">Oferta</a>
+          <a href="#about">O nas</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+    <section class="section section--home">
+      <video autoplay muted loop id="bg-video">
+        <source src="assets/img/redBg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h1 class="title">Projektowanie stron WWW</h1>
+      <p class="highlight">
+        Masz pomysł na biznes i szukasz strony internetowej?<br />
+        <span class="highlight-text">Jesteś w idealnym miejscu!</span>
+      </p>
+    </section>
+    <section id="offer" class="section section--offers">
+      <h2>Nasza oferta</h2>
+      <div class="offer-container">
+        <div data-aos="fade-left" class="offer offer--basic">
+          <h3>PAKIET PODSTAWOWY</h3>
+          <ul>
+            <li>Strona typu One Page – wizytówka</li>
+            <li>System CMS, np. WordPress</li>
+            <li>Indywidualny projekt graficzny</li>
+            <li>Certyfikat bezpieczeństwa SSL</li>
+            <li>Domena oraz hosting na rok</li>
+            <li>Formularz kontaktowy</li>
+            <li>Projekt responsywny</li>
+            <li>Integracja z Twoimi profilami w mediach społecznościowych</li>
+            <li>Galeria zdjęć</li>
+            <li>Mapa Google</li>
+            <li>Dokładny opis działalności</li>
+          </ul>
+          <p>1000 zł/netto (plus cena hostingu i domeny)</p>
+          <p>Oferta dodatkowa oraz indywidualna wycena:</p>
+          <ul>
+            <li>Dodatkowe funkcjonalności dostosowane do potrzeb</li>
+            <li>Projekty graficzne, w tym logo</li>
+            <li>Kampanie reklamowe w Google</li>
+          </ul>
+        </div>
+        <div data-aos="flip-down" class="offer offer--basic">
+          <h3>PAKIET MEDIUM</h3>
+          <ul>
+            <li>Strona typu Multi Page</li>
+            <li>System CMS: WordPress</li>
+            <li>Projekt responsywny</li>
+            <li>Certyfikat SSL</li>
+            <li>Domena i hosting na 2 lata</li>
+            <li>Formularz kontaktowy</li>
+            <li>Integracja z Social Media</li>
+            <li>Galeria zdjęć i multimedia</li>
+            <li>Mapa Google</li>
+            <li>Opis szczegółowej oferty</li>
+            <li>Optymalizacja SEO</li>
+          </ul>
+          <p>2000 zł/netto (plus cena hostingu i domeny)</p>
+          <p>Opcjonalne dodatki i indywidualna wycena usług marketingowych.</p>
+          <ul>
+            <li>Dodatkowe funkcjonalności na życzenie</li>
+            <li>Projektowanie logo i grafika</li>
+            <li>Marketing na Instagram i Facebooku</li>
+            <li>Reklama Google Ads i SEO</li>
+          </ul>
+        </div>
+
+        <div data-aos="flip-right" class="offer offer--basic">
+          <h3>PAKIET PREMIUM</h3>
+          <ul>
+            <li>Strona z pełnymi funkcjonalnościami</li>
+            <li>System CMS: WordPress lub Drupal</li>
+            <li>Projekt unikalny i zaawansowany</li>
+            <li>Certyfikat bezpieczeństwa SSL</li>
+            <li>Domena i hosting na 3 lata</li>
+            <li>Zaawansowany formularz kontaktowy</li>
+            <li>Integracja z Social Media i e-commerce</li>
+            <li>Dynamiczne funkcje i interaktywne media</li>
+            <li>Mapa Google z zaawansowaną nawigacją</li>
+            <li>Szczegółowy opis i analiza rynku</li>
+            <li>Kompleksowa optymalizacja SEO</li>
+          </ul>
+          <p>3000 zł/netto (plus cena hostingu i domeny)</p>
+          <p>Dodatkowe opcje i usługi marketingowe dostępne na życzenie.</p>
+          <ul>
+            <li>Specjalistyczne funkcje dostosowane do potrzeb</li>
+            <li>Projektowanie logo, identyfikacja wizualna</li>
+            <li>Zarządzanie kampaniami reklamowymi</li>
+            <li>Optymalizacja Google Ads i strategie SEO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section section--unique">
+      <div class="section__subsection section__subsection--img">
+        <div class="img-container img-container--unique">
+          <img src="assets/img/man.webp" alt="growing mushroom image" />
+        </div>
+      </div>
+      <div class="section__subsection section__subsection--unique">
+        <h3>Poznajmy Się</h3>
+        <div class="subsection__content subsection__content--unique">
+          <article class="article article--unique">
+            <p>
+              Jesteśmy zespołem pasjonatów technologii i designu,
+              specjalizującym się w tworzeniu nowoczesnych i funkcjonalnych
+              stron internetowych. Naszą misją jest dostarczanie naszym klientom
+              najwyższej jakości usług, które pomagają wyróżnić się w cyfrowym
+              świecie. Nasza firma składa się z doświadczonych programistów,
+              grafików i specjalistów od marketingu internetowego. Każdy projekt
+              traktujemy indywidualnie, dbając o każdy szczegół – od unikalnego
+              designu, przez intuicyjną nawigację, po optymalizację pod kątem
+              wyszukiwarek (SEO).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--contact">
+      <div class="contact-container">
+        <div class="contact-form">
+          <h2>Napisz do nas</h2>
+          <form
+            id="contactForm"
+            target="_blank"
+            action="https://formsubmit.co/b.bartek987@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+
+            <div class="form-group form-box">
+              <label for="username">Imię:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Wpisz imię"
+                required
+              />
+              <div class="error-text"></div>
+            </div>
+            <div class="form-group form-box">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Wpisz email"
+                required
+              />
+              <div class="error-text"></div>
+            </div>
+            <div class="form-group form-box">
+              <label for="phone">Telefon:</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Wpisz telefon"
+                required
+              />
+              <div class="error-text"></div>
+            </div>
+            <div class="form-group form-box">
+              <label for="message">Wiadomość:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Wpisz wiadomość"
+                required
+              ></textarea>
+              <div class="error-text"></div>
+            </div>
+            <button type="submit" class="send">Wyślij</button>
+            <button type="button" class="clear">Wyczyść</button>
+          </form>
+        </div>
+        <div class="contact-map">
+          <h2>Nasza lokalizacja</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6370.992561684301!2d20.41216101084056!3d51.124943795866514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4719c96bac9413e1%3A0x1e714e08aeb1960a!2s26-200%20Ko%C5%84skie!5e0!3m2!1sen!2spl!4v1719063208099!5m2!1sen!2spl"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="index.html">
+            <img src="assets/img/logo2.png" alt="company logo" />
+          </a>
+        </div>
+        <div class="footer__info">
+          <h3>Web Zone</h3>
+          <p>&copy; 2024 All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="js/home.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
