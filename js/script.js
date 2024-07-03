@@ -3,37 +3,20 @@ const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav__link");
 const hamburgerLabel = document.querySelector(".hamburger");
 
-hamburgerToggle.addEventListener("change", function () {
-  if (this.checked) {
-    openNav();
-  } else {
-    closeNav();
+function toggleNav() {
+  if (window.innerWidth <= 767) {
+    nav.classList.toggle("open");
+    hamburgerToggle.checked = nav.classList.contains("open");
   }
-});
+}
 
 hamburgerLabel.addEventListener("click", function () {
-  if (hamburgerToggle.checked) {
-    closeNav();
-  } else {
-    openNav();
-  }
+  toggleNav();
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("click", function () {
-    closeNav();
+    nav.classList.remove("open");
+    hamburgerToggle.checked = false;
   });
 });
-
-function openNav() {
-  if (window.innerWidth <= 767) {
-    nav.style.display = "flex";
-  }
-}
-
-function closeNav() {
-  if (window.innerWidth <= 767) {
-    nav.style.display = "none";
-    hamburgerToggle.checked = false;
-  }
-}
