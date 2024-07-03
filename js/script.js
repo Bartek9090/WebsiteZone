@@ -34,6 +34,6 @@ function openNav() {
 function closeNav() {
   if (window.innerWidth <= 767) {
     nav.style.display = "none";
-    hamburgerToggle.checked = false; // Odznaczenie checkboxa
+    hamburgerToggle.checked = false;
   }
 }

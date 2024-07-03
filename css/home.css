@@ -146,11 +146,6 @@ a {
   display: flex;
 }
 
-@media (min-width: 767px) {
-  .header__logo img {
-    width: 20rem;
-  }
-}
 /* Kolejna sprawka do sprawdzenia */
 
 @media (min-width: 650px) {
@@ -163,7 +158,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    height: 3rem;
+    height: 2rem;
     background: transparent;
     border: none;
     padding: 0;
