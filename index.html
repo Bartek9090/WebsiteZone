@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
-    <!-- <header id="home" class="header">
-      <div class="header__logo">
-        <a href="index.html">
-          <img src="assets/img/logo2.png" alt="company logo" />
-        </a>
-      </div>
-      <div class="header__nav">
-        <input type="checkbox" id="hamburger-toggle" />
+    <header id="home" class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="assets/img/logo2.png" alt="company logo" />
+          </a>
+        </div>
 
+        <input type="checkbox" id="hamburger-toggle" />
         <label for="hamburger-toggle" class="hamburger">
           <div class="hamburger__line"></div>
           <div class="hamburger__line"></div>
@@ -31,13 +31,24 @@
         </label>
 
         <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="products.html">Product</a>
-          <a href="about-us.html">About Us</a>
-          <a href="contact.html">Contact</a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#offer" class="nav__link">Oferta</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">O Nas</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Kontact</a>
+            </li>
+          </ul>
         </nav>
       </div>
-    </header> -->
+    </header>
+
     <section class="section section--home">
       <video autoplay muted loop id="bg-video">
         <source src="assets/img/redBg.mp4" type="video/mp4" />
@@ -152,7 +163,7 @@
       </div>
     </section>
 
-    <section class="section section--contact">
+    <section id="contact" class="section section--contact">
       <div class="contact-container">
         <div class="contact-form">
           <h2>Napisz do nas</h2>

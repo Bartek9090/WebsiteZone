@@ -20,102 +20,67 @@ a {
   display: flex;
   width: 100%;
 }
-
+/* .header {
+  background-color: #e14040;
+} */
 .header__logo {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 4rem;
   height: auto;
+  margin: 5px 16px;
 }
-
 .header__logo img {
   border-radius: 0.3rem;
   width: 6rem;
 }
-
+/* Styl dla headera */
 .header {
-  height: 10vh;
-  width: 100vw;
-  background-color: rgba(20, 19, 19, 0.8);
-  position: fixed;
-  z-index: 1;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* .header__nav {
-  margin-left: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-} */
-
-.header__nav .hamburger {
-  height: 1.5rem;
-  width: 2.2rem;
+  position: relative;
 }
 
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(37, 36, 36);
+}
+
+/* Ukrycie checkboxa */
 #hamburger-toggle {
-  position: absolute;
-  height: 1.5rem;
-  width: 2.2rem;
-  opacity: 0;
-  z-index: 3;
+  display: none;
 }
 
+/* Styl dla etykiety */
 .hamburger {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.3rem;
-  height: 100%;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  padding: 5px;
+  background-color: transparent;
+  color: #fff;
+  z-index: 2000; /* aby przycisk był nad menu */
 }
 
+/* Styl dla linii hamburgera */
 .hamburger__line {
-  flex: 1 1 0;
+  width: 100%;
+  height: 3px;
   background-color: #fff;
-  transition: 0.6s;
-  width: 100%;
-  border-top: 0.3rem solid #fff;
-  height: 1.5vh;
+
+  transition: all 0.3s ease;
 }
-/* 
-.nav {
-  background: black;
-  display: none;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3vh;
-  padding: 1vh 3vw;
-  position: absolute;
-  top: 10vh;
-  width: 100%;
-  z-index: 3;
-  height: 90vh;
-}
-.navDesktop {
-  display: none;
-} */
 
-/* .nav a,
-.section--home a {
-  width: 8rem;
-  background: antiquewhite;
-  border-radius: 0.3rem;
-  font-weight: bold;
-  display: block;
-  padding: 0.3rem;
-  text-align: center;
-} */
-
-/* .nav a:hover,
-.section--home a:hover {
-  transform: scale(0.95);
-  transition: transform 0.2s linear;
-} */
-
+/* Styl zmieniający wygląd linii po zaznaczeniu checkboxa */
 #hamburger-toggle:checked + .hamburger .hamburger__line:nth-child(1) {
-  transform: rotate(-45deg) translate(-0.4rem, 0.5rem);
-  transform-origin: center;
+  transform: rotate(45deg) translate(5px, 3px);
 }
 
 #hamburger-toggle:checked + .hamburger .hamburger__line:nth-child(2) {
@@ -123,22 +88,97 @@ a {
 }
 
 #hamburger-toggle:checked + .hamburger .hamburger__line:nth-child(3) {
-  transform: rotate(45deg) translate(-0.3rem, -0.5rem);
-  transform-origin: center;
+  transform: rotate(-45deg) translate(5px, -4px);
 }
 
-/* #hamburger-toggle:checked ~ .nav {
+/* Styl dla nawigacji */
+.nav {
+  display: none;
+  flex-direction: column;
+  background: black;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 60px;
   right: 0;
-  transition: right 0.3s ease;
-} */
+  width: 200px;
+  gap: 3vh;
+  padding: 1vh 3vw;
+  border: 1px solid #ddd;
+  top: 1px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 
-.hamburger__line {
-  background-color: #fff;
   width: 100%;
-  height: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  height: 99vh;
 }
 
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  border-bottom: 1px solid #ddd;
+}
+
+.nav__item:last-child {
+  border-bottom: none;
+}
+
+.nav__link {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.nav__link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Wyświetlanie nawigacji po zaznaczeniu checkboxa */
+#hamburger-toggle:checked ~ .nav {
+  display: flex;
+}
+
+@media (min-width: 767px) {
+  .header__logo img {
+    width: 20rem;
+  }
+}
+/* Kolejna sprawka do sprawdzenia */
+
+@media (min-width: 767px) {
+  .hamburger {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    width: 50%;
+    background: transparent;
+    border: none;
+  }
+  .nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+  .nav__link:hover {
+    background: transparent;
+  }
+}
+
+/* PONIEJ DZIAŁA  */
 .section--home {
   position: relative;
   display: flex;
@@ -330,9 +370,9 @@ a {
 }
 
 @media (min-width: 760px) {
-  .header {
+  /* .header {
     padding: 2vh 3vw;
-  }
+  } */
 
   .header__logo {
     width: 2.3rem;
@@ -343,10 +383,10 @@ a {
     height: 100%;
   } */
 
-  #hamburger-toggle,
+  /* #hamburger-toggle,
   .hamburger {
     display: none;
-  }
+  } */
 
   /* .navDesktop {
     display: flex;
